@@ -1,3 +1,8 @@
+todoclass = {
+    undone:[],
+    done:[]
+}
+
 //input task
 const input = document.querySelector('input')
 input.placeholder = "Enter list here"
@@ -15,18 +20,14 @@ Addbtn.addEventListener('click', () => {
 //Reset Button
 const Resetbtn = document.querySelector('#Reset')
 Resetbtn.addEventListener('click', () => {
-    while (undoneDiv.firstChild) {
-        undoneDiv.removeChild(undoneDiv.lastChild);
-    }
-    while (doneDiv.firstChild) {
-        doneDiv.removeChild(doneDiv.lastChild);
-    }
+    Reset()
 })
 
 //input with Enter
 input.addEventListener("keypress",(ev)=>{
     if(ev.key == "Enter"){
-        INPUT()
+        if(input.value != "reset")INPUT()
+        else{Reset()}
     }
 })
 
@@ -43,6 +44,9 @@ function INPUT() {
         // div.style.fontFamily = "Righteous, cursive"
         div.style.fontFamily = "Lobster, cursive"
         divTask.append(div)
+        //////////////////////////////
+        todoclass.undone.push(div)
+        //////////////////////////////
 
         //button flex
         const Btndiv = document.createElement('div')
@@ -63,7 +67,9 @@ function INPUT() {
         delBtn.setAttribute("class","bg-red-500 px-1 rounded-xl")
         delBtn.addEventListener('click', () => {
         undoneDiv.removeChild(divTask)
-
+        //////////////////////////
+        todoclass.undone.pop(div)
+        //////////////////////////
         })
 
         //doneButton
@@ -74,6 +80,9 @@ function INPUT() {
         doneDiv.insertBefore(divTask,doneDiv.firstChild)
         div.style.textDecoration = 'line-through'
         divTask.removeChild(Btndiv)
+        ////////////////////////
+        todoclass.done.push(div)
+        ////////////////////////
         })
 
         Btndiv.append(doneBtn)
@@ -84,5 +93,15 @@ function INPUT() {
 
         //Clear input box after Add
         input.value = ''
+    }
+}
+
+//Reset
+function Reset() {
+    while (undoneDiv.firstChild) {
+        undoneDiv.removeChild(undoneDiv.lastChild);
+    }
+    while (doneDiv.firstChild) {
+        doneDiv.removeChild(doneDiv.lastChild);
     }
 }
