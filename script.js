@@ -37,7 +37,7 @@ function INPUT() {
     }
     else{
         const divTask = document.createElement('div')
-        divTask.setAttribute("class","flex justify-between text-xl border-b-2 border-yellow")
+        divTask.setAttribute("class","flex justify-between text-xl border-b-2")
         const div = document.createElement('div')
         div.innerHTML = input.value
         // div.style.fontFamily = "Righteous, cursive"
