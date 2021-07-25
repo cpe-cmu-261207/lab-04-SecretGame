@@ -9,6 +9,29 @@ const doneDiv = document.querySelector('#donediv')
 //add task button
 const Addbtn = document.querySelector('#Add')
 Addbtn.addEventListener('click', () => {
+    INPUT()
+})
+
+//Reset Button
+const Resetbtn = document.querySelector('#Reset')
+Resetbtn.addEventListener('click', () => {
+    while (undoneDiv.firstChild) {
+        undoneDiv.removeChild(undoneDiv.lastChild);
+    }
+    while (doneDiv.firstChild) {
+        doneDiv.removeChild(doneDiv.lastChild);
+    }
+})
+
+//input with Enter
+input.addEventListener("keypress",(ev)=>{
+    if(ev.key == "Enter"){
+        INPUT()
+    }
+})
+
+//Input
+function INPUT() {
     if(input.value == ''){
         window.alert("Task cannot be empty na i sus")
     }
@@ -62,16 +85,4 @@ Addbtn.addEventListener('click', () => {
         //Clear input box after Add
         input.value = ''
     }
-})
-
-//Reset Button
-const Resetbtn = document.querySelector('#Reset')
-Resetbtn.addEventListener('click', () => {
-    while (undoneDiv.firstChild) {
-        undoneDiv.removeChild(undoneDiv.lastChild);
-    }
-    while (doneDiv.firstChild) {
-        doneDiv.removeChild(doneDiv.lastChild);
-    }
-})
-
+}
