@@ -11,20 +11,36 @@
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Righteous&display=swap" rel="stylesheet">
 </head>
 
 <body class="bg-local" style="background-image:url(picture/bg.jpg)">
-	<div class="py-3 mb-4 space-y-5" >
 		<div class="max-w-screen-md mx-auto">
-			<h1 class="text-center text-4xl" style="font-family: 'Lobster', cursive;">Minimal Todo List</h1>
+			<div class="py-3 mb-4 space-y-5" >
+				<h1 class="text-center text-6xl" style="font-family: 'Lobster', cursive;">♠ Minimal Todo List ♠</h1>
+				<h1 class="text-center text-3xl" style="font-family: 'Lobster', cursive;">
+					<marquee behavior="scroll" direction="left">୧ʕ•̀ᴥ•́ʔ୨ Just Do It!!!! There is nothing too difficult to do.</marquee>
+					</h1>
+				<div class="flex justify-center space-x-2">
+					<input  type='text'class="text-2xl rounded-xl text-center" style="font-family: 'Lobster', cursive;" placeholder="Enter list here">
+					<button id="Add" class="bg-yellow-600 py-1 px-2 rounded-xl" style="font-family: 'Lobster', cursive;" ><b>Add</b></button>
+					<button id="Reset" class="bg-red-800 py-1 px-2 rounded-xl" style="font-family: 'Lobster', cursive;" ><b>Reset</b></button>
+				</div>
+			</div>
+			<div class="py-3 mb-4 space-y-10" >
+				<div class="flex justify-center ">
+					<div id="undonediv" style="width:50%;" class="space-y-2">
+
+					</div>
+				</div>
+
+				<div class="flex justify-center">
+					<div id="donediv" style="width:50%;" class="space-y-2">
+
+					</div>
+				</div>
+			</div>
 		</div>
-		<asd class=" max-w-screen-md mx-auto flex ">
-			<form class="flex space-x-1" style="margin:auto;">
-				<input  type='text' size="50" class="text-2xl rounded-xl" style="font-family: 'Lobster', cursive;">
-				<button class="bg-yellow-600 py-1 px-2 rounded-xl">+</button>
-			</form>
-		</asd>
-	</div>
 </body>
 
 </html>
