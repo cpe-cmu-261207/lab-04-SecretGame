@@ -80,9 +80,9 @@ function INPUT() {
         doneDiv.insertBefore(divTask,doneDiv.firstChild)
         div.style.textDecoration = 'line-through'
         divTask.removeChild(Btndiv)
-        ////////////////////////
+        ///////////////////////
         todoclass.done.push(div)
-        ////////////////////////
+        ///////////////////////
         })
 
         Btndiv.append(doneBtn)
