@@ -44,9 +44,9 @@ function INPUT() {
         // div.style.fontFamily = "Righteous, cursive"
         div.style.fontFamily = "Lobster, cursive"
         divTask.append(div)
-        //////////////////////////////
+        /////////////////////////////
         todoclass.undone.push(div)
-        //////////////////////////////
+        /////////////////////////////
 
         //button flex
         const Btndiv = document.createElement('div')
